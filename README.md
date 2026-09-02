@@ -1,5 +1,5 @@
 # DOCTYPE
-
+```
 <!DOCTYPE html>
 <html class="client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-menu-disabled vector-feature-language-in-main-page-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-1 vector-feature-appearance-pinned-clientpref-1 skin-theme-clientpref-day vector-sticky-header-enabled vector-toc-available skin-thumbsize-clientpref-standard" lang="en" dir="ltr">
 <head>
@@ -1105,3 +1105,4 @@ additional terms may apply. By using this site, you agree to the <a href="https:
 <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Document type declaration","url":"https:\/\/en.wikipedia.org\/wiki\/Document_type_declaration","sameAs":"http:\/\/www.wikidata.org\/entity\/Q5372118","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q5372118","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2004-11-21T22:26:53Z","dateModified":"2026-07-18T02:30:36Z","headline":"instruction that associates a particular SGML or XML document with a document type definition (DTD)"}</script>
 </body>
 </html>
+```
