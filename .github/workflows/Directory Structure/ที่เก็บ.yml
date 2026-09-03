@@ -1,0 +1,31 @@
+your-repo-name/
+└── .github/
+    └── workflows/
+        └── main.yml  <-- ไฟล์เขียนคำสั่งอัตโนมัติ (ตั้งชื่ออะไรก็ได้ตามด้วย .yml)
+name: CI Example
+
+# กำหนดเหตุการณ์ (Event) ที่จะให้สคริปต์นี้ทำงาน
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+# งานที่ต้องการให้ระบบทำ
+jobs:
+  build:
+    runs-on: ubuntu-latest # ใช้ระบบปฏิบัติการ Ubuntu ในการรัน
+
+    steps:
+    # ขั้นตอนที่ 1: ดึงโค้ดจาก Repo ลงมาในเครื่องจำลอง
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # ขั้นตอนที่ 2: รันคำสั่งสคริปต์ที่ต้องการ
+    - name: Run a one-line script
+      run: echo "Hello, GitHub Actions!"
+
+    - name: Run a multi-line script
+      run: |
+        echo "Testing your application..."
+        echo "Everything looks good!"
