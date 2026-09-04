@@ -1,5 +1,2812 @@
 # DOCTYPE
+
 ```
+
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="th" class="ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="th"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+      <meta name="generator" content="ckan 2.9.2" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>กรมการปกครอง - หน่วยงาน - Government Data Catalog : GD Catalog</title>
+
+    
+    
+  
+    <link rel="shortcut icon" href="/uploads/admin/2023-09-13-081139.833943gdsmartplus.png" />
+    
+    
+        
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JVREEV8L3P"></script>
+    <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+
+     
+         gtag('set', 'linker');
+
+         gtag('js', new Date());
+
+         gtag('config', 'G-JVREEV8L3P', {
+             anonymize_ip: true,
+             linker: {
+                 domains: []
+             }
+         });
+     
+
+     
+     
+
+    </script>
+
+
+    
+
+  <link rel="alternate" type="application/atom+xml" title="Government Data Catalog : GD Catalog - Datasets in organization: กรมการปกครอง" href="/feeds/organization/e068756a-4b37-4ee9-9f61-ce31d6ffbf3b.atom" />
+
+    
+  
+      
+      
+      
+      
+    
+
+  
+  
+
+
+
+
+    
+
+
+
+
+    
+    
+
+
+    
+      
+      
+    
+
+    
+    <link href="/webassets/base/a98d57ea_main.css" rel="stylesheet"/>
+<link href="/webassets/ckanext-thai-gdc/c52af66e_thai_gdc.css" rel="stylesheet"/>
+<link href="/webassets/vendor/f3b8236b_select2.css" rel="stylesheet"/>
+<link href="/webassets/vendor/0b01aef1_font-awesome.css" rel="stylesheet"/>
+<link href="/webassets/ckanext-thai-gdc/b0aa7ec3_thai_gdc_main.css" rel="stylesheet"/>
+<link href="/webassets/ckanext-geoview/77c3ca23_geo-resource-styles.css" rel="stylesheet"/><style>
+        html {
+filter: grayscale(0%) !important;
+}
+/* =============== Footer base (shift -300px) =============== */
+footer {
+  --logo-size: 120px;   /* ขนาดโลโก้ */
+  --gap: 20px;          /* ระยะห่างระหว่างโลโก้ */
+  --shift: -380px;      /* เลื่อนไปซ้าย (ติดลบ = ไปซ้าย) */
+
+  position: relative !important;
+  text-align: left;
+  background-color: #015e6b;
+  color: #fff;
+  padding-top: calc(var(--logo-size) + 32px) !important; /* เผื่อพื้นที่โชว์โลโก้ */
+  padding-bottom: 24px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* เอาพื้นหลังกล่องขาวออก */
+footer::before { content: none !important; }
+
+/* โลโก้สองอันอยู่เหนือข้อความ */
+footer::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 0;
+  width: 100%;
+  height: var(--logo-size);
+  z-index: 2;
+
+  background-image:
+    url("https://gitlab.gdcatalog.go.th/pornprom.gd/images/-/raw/main/mdes-logo1.png"),
+    url("https://gitlab.gdcatalog.go.th/pornprom.gd/images/-/raw/main/nso-logo1.png");
+
+  background-repeat: no-repeat, no-repeat;
+  background-size: var(--logo-size) auto, var(--logo-size) auto;
+
+  /* วางให้ “ติดกัน” แล้วขยับซ้ายด้วย --shift */
+  background-position:
+    calc(50% + var(--shift) - ((var(--logo-size) + var(--gap)) / 2)) center,
+    calc(50% + var(--shift) + ((var(--logo-size) + var(--gap)) / 2)) center;
+}
+
+/* --- Responsive เผื่อจอแคบ โลโก้ไม่หลุดขอบ --- */
+@media (max-width: 992px) {
+  footer { --shift: -160px; --logo-size: 100px; }
+}
+@media (max-width: 600px) {
+  footer { --shift: 0px; --logo-size: 90px; --gap: 12px; }
+}
+
+/* ดีบัก (ลบได้)
+footer::after { outline: 1px dashed #f00; }
+*/
+
+
+
+/* ===============  โบว์ดำมุมซ้ายบน =============== */
+/* 🎀 โบว์ดำมุมซ้ายบน โดยใช้รูปจาก NSO */
+header::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0; /* มุมซ้ายบน */
+    width: 120px;
+    height: 120px;
+    background: url('https://gitlab.gdcatalog.go.th/pornprom.gd/images/-/raw/main/black_ribbon_top_left.png') no-repeat center center;
+    background-size: contain;
+    z-index: 99999;
+    opacity: 0.95;
+    pointer-events: none; /* คลิกทะลุได้ */
+}
+
+/* สำหรับมือถือ */
+@media (max-width: 768px) {
+    header::before {
+        width: 70px;
+        height: 70px;
+        opacity: 0.85;
+    }
+}
+
+/* แบ็กกราวด์ hero banner */
+.hero {
+    background: url("https://catalog.nso.go.th/base/images/banner4mode_13.png") no-repeat center center;
+    background-size: cover;
+}
+
+      </style>
+    
+  </head>
+
+  
+  <body data-site-root="https://gdcatalog.go.th/" data-locale-root="https://gdcatalog.go.th/" >
+
+    
+    
+        
+    
+
+    
+    <div class="sr-only sr-only-focusable"><a href="#content">Skip to content</a></div>
+  
+
+  
+     
+<div class="account-masthead">
+  <div class="container">
+     
+    <nav class="account not-authed" aria-label="Account">
+      <ul class="list-unstyled">
+        
+    <li><a href="/sso/login">เข้าสู่ระบบ</a></li>
+    
+      </ul>
+    </nav>
+     
+  </div>
+</div>
+
+<header class="navbar navbar-static-top masthead">
+    
+  <div class="container">
+    <div class="navbar-right">
+      <button data-target="#main-navigation-toggle" data-toggle="collapse" class="navbar-toggle collapsed" type="button" aria-label="expand or collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="fa fa-bars"></span>
+      </button>
+    </div>
+    <hgroup class="header-image navbar-left">
+       
+      <a class="logo" href="/"><img src="/uploads/admin/2023-07-04-064640.259684governmentdataok.png" alt="Government Data Catalog : GD Catalog" title="Government Data Catalog : GD Catalog" /></a>
+       
+    </hgroup>
+
+    <div class="collapse navbar-collapse" id="main-navigation-toggle">
+      
+      <nav class="section navigation">
+        <ul class="nav nav-pills">
+            
+<style>
+    .media-grid[data-module="media-grid"] {
+        visibility: hidden;
+    }
+</style>
+<ul class="nav nav-pills">
+    <li>
+        <a href="/dataset/">
+            <span aria-hidden="true" class="fa fa-database"></span>
+            ชุดข้อมูล
+        </a>
+    </li>
+    <li>
+        <a href="/hv/">
+            <span aria-hidden="true" class="fa fa-search"></span>
+            ค้นหาจากบัญชีหน่วยงาน
+        </a>
+    </li>
+    <li>
+        <a href="/organization/">
+            <span aria-hidden="true" class="fa fa-building"></span>
+            หน่วยงาน
+        </a>
+    </li>
+    <li>
+        <a href="/group/">
+            <span aria-hidden="true" class="fa fa-th"></span>
+            กลุ่ม
+        </a>
+    </li>
+    <li>
+        <a href="/about">
+            <span aria-hidden="true" class="fa fa-info-circle"></span>
+            เกี่ยวกับ
+        </a>
+    </li>
+</ul>
+
+<script>
+    setTimeout(function () {
+        try {
+            document.getElementsByClassName('media-grid')[0].style.visibility = 'unset';
+        } catch (e) {
+
+        }
+
+    }, 500);
+</script>
+
+        </ul>
+      </nav>
+       
+
+    </div>
+  </div>
+</header>
+
+  
+    <div class="main">
+      <div id="content" class="container">
+        
+          
+            <div class="flash-messages">
+              
+                
+              
+            </div>
+          
+
+          
+            <div class="toolbar" role="navigation" aria-label="Breadcrumb">
+              
+                
+                  <ol class="breadcrumb">
+                    
+<li class="home"><a href="/" aria-label="หน้าหลัก"><i class="fa fa-home"></i><span> หน้าหลัก</span></a></li>
+                    
+  <li><a href="/organization/">หน่วยงาน</a></li>
+  <li class="active"><a href="/organization/e068756a-4b37-4ee9-9f61-ce31d6ffbf3b">กรมการปกครอง</a></li>
+
+                  </ol>
+                
+              
+            </div>
+          
+
+          <div class="row wrapper">
+            
+            
+            
+
+            
+              <aside class="secondary col-sm-3">
+                
+                
+  
+
+
+
+
+  
+  <div class="module module-narrow module-shallow context-info">
+    
+    <section class="module-content">
+      
+      
+        <div class="image">
+          <a href="/organization/e068756a-4b37-4ee9-9f61-ce31d6ffbf3b">
+            <img src="https://gdcatalog.go.th/assets/images/organization_logo/pokkrong.png" width="200" alt="e068756a-4b37-4ee9-9f61-ce31d6ffbf3b" />
+          </a>
+        </div>
+      
+      
+    <h1 class="heading">
+        
+            กรมการปกครอง
+        
+        
+    </h1>
+
+      
+    
+      
+        <p class="empty">ไม่มีคำอธิบายสำหรับหน่วยงานนี้</p>
+      
+      
+    
+        <hr>
+        
+    
+
+      
+        
+        <div class="nums">
+          <dl>
+            <dt>ผู้ติดตาม</dt>
+            <dd data-module="followers-counter" data-module-id="b1b2540a-8fbc-41a4-a3a7-bcb1387346f5" data-module-num_followers="0"><span>0</span></dd>
+          </dl>
+          <dl>
+            <dt>ชุดข้อมูล</dt>
+            <dd><span>16</span></dd>
+          </dl>
+        </div>
+        
+        
+        <div class="follow_button">
+          
+        </div>
+        
+      
+      
+    </section>
+  </div>
+  
+  
+  <div class="filters">
+    <div>
+      
+        
+
+    
+    
+	
+	    
+	    
+		<section class="module module-narrow module-shallow">
+		    
+<h2 class="module-heading">
+	<i class="fa fa-filter"></i>
+	
+	
+	หน่วยงาน
+</h2>
+
+		    
+
+	
+	<nav aria-label="หน่วยงาน">
+		<ul class="list-unstyled nav nav-simple nav-facet">
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?organization=e068756a-4b37-4ee9-9f61-ce31d6ffbf3b" title="">
+				<span class="item-label">กรมการปกครอง</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">16</span>
+			</a>
+			</li>
+		
+		</ul>
+	</nav>
+
+	<p class="module-footer">
+		
+		
+		
+	</p>
+	
+
+
+		</section>
+	    
+	
+    
+
+      
+        
+
+    
+    
+	
+	    
+	    
+		<section class="module module-narrow module-shallow">
+		    
+<h2 class="module-heading">
+	<i class="fa fa-filter"></i>
+	
+	
+	กลุ่ม
+</h2>
+
+		    
+
+	
+	<nav aria-label="กลุ่ม">
+		<ul class="list-unstyled nav nav-simple nav-facet">
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?groups=10589b70-b1a2-43c8-8322-51c898a39f0b" title="">
+				<span class="item-label">การบริหารงาน</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">3</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?groups=category01-group01" title="">
+				<span class="item-label">สาขาประชากรศาสตร์ ประชากรและเคหะ</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">3</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?groups=bc8ed840-1af9-4f48-9f58-14de60b695b3" title="">
+				<span class="item-label">การส่งเสริมความโปร่งใส</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">2</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?groups=613b4f4e-5937-43dc-bd5b-54be7ad0c034" title="">
+				<span class="item-label">การบริหารจัดการความเสี่ยงการทุจริต</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">1</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?groups=fe605f08-9ef4-4c59-9fd3-3f78b81e631b" title="">
+				<span class="item-label">ข้อมูลพื้นฐาน</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">1</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?groups=8a4e2342-f9c8-4b58-bdd9-dc93b776dcf8" title="">
+				<span class="item-label">คู่มือ/รายงาน/บทความ</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">1</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?groups=72bc2f9e-6a85-451a-86f6-b27e688e8cc8" title="">
+				<span class="item-label">สาขาสุขภาพ</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">1</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?groups=48190ab6-be22-43f7-91d9-7adfd9fdddb8" title="">
+				<span class="item-label">สาขาหญิงและชาย</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">1</span>
+			</a>
+			</li>
+		
+		</ul>
+	</nav>
+
+	<p class="module-footer">
+		
+		
+		
+	</p>
+	
+
+
+		</section>
+	    
+	
+    
+
+      
+        
+
+    
+    
+	
+	    
+	    
+		<section class="module module-narrow module-shallow">
+		    
+<h2 class="module-heading">
+	<i class="fa fa-filter"></i>
+	
+	
+		
+	
+	แท็คโดยหน่วยงาน
+</h2>
+
+		    
+
+	
+	<nav aria-label="แท็ค">
+		<ul class="list-unstyled nav nav-simple nav-facet">
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?tags=ITA" title="">
+				<span class="item-label">ITA</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">7</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?tags=OIT" title="">
+				<span class="item-label">OIT</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">7</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?tags=%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%9B%E0%B8%B4%E0%B8%94%E0%B9%80%E0%B8%9C%E0%B8%A2%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0" title="">
+				<span class="item-label">การเปิดเผยข้อมูลสาธารณะ</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">7</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?tags=%E0%B8%88%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A7%E0%B8%B1%E0%B8%94" title="">
+				<span class="item-label">จังหวัด</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">7</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?tags=%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88" title="">
+				<span class="item-label">เขตพื้นที่</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">7</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?tags=%E0%B8%95%E0%B8%B3%E0%B8%9A%E0%B8%A5" title="">
+				<span class="item-label">ตำบล</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">6</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?tags=%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B9%88%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99" title="">
+				<span class="item-label">หมู่บ้าน</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">6</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?tags=%E0%B8%AD%E0%B8%B3%E0%B9%80%E0%B8%A0%E0%B8%AD" title="">
+				<span class="item-label">อำเภอ</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">6</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?tags=GIS" title="">
+				<span class="item-label">GIS</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">5</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?tags=LAT" title="">
+				<span class="item-label">LAT</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">5</span>
+			</a>
+			</li>
+		
+		</ul>
+	</nav>
+
+	<p class="module-footer">
+		
+		
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?_tags_limit=0" class="read-more">แสดง แท็ค เพิ่มเติม</a>
+		
+		
+	</p>
+	
+
+
+		</section>
+	    
+	
+    
+
+      
+        
+
+    
+    
+	
+	    
+	    
+		<section class="module module-narrow module-shallow">
+		    
+<h2 class="module-heading">
+	<i class="fa fa-filter"></i>
+	
+	
+	รูปแบบ
+</h2>
+
+		    
+
+	
+	<nav aria-label="รูปแบบ">
+		<ul class="list-unstyled nav nav-simple nav-facet">
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?res_format=CSV" title="">
+				<span class="item-label">CSV</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">7</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?res_format=PDF" title="">
+				<span class="item-label">PDF</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">6</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?res_format=JSON" title="">
+				<span class="item-label">JSON</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">5</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?res_format=XLS" title="">
+				<span class="item-label">XLS</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">2</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?res_format=XLSX" title="">
+				<span class="item-label">XLSX</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">2</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?res_format=ZIP" title="">
+				<span class="item-label">ZIP</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">2</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?res_format=TEXT" title="">
+				<span class="item-label">TEXT</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">1</span>
+			</a>
+			</li>
+		
+		</ul>
+	</nav>
+
+	<p class="module-footer">
+		
+		
+		
+	</p>
+	
+
+
+		</section>
+	    
+	
+    
+
+      
+        
+
+    
+    
+	
+	    
+	    
+		<section class="module module-narrow module-shallow">
+		    
+<h2 class="module-heading">
+	<i class="fa fa-filter"></i>
+	
+	
+	สัญญาอนุญาต
+</h2>
+
+		    
+
+	
+	<nav aria-label="สัญญาอนุญาต">
+		<ul class="list-unstyled nav nav-simple nav-facet">
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?license_id=Open+Data+Common" title="">
+				<span class="item-label">Open Data Common</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">16</span>
+			</a>
+			</li>
+		
+		</ul>
+	</nav>
+
+	<p class="module-footer">
+		
+		
+		
+	</p>
+	
+
+
+		</section>
+	    
+	
+    
+
+      
+        
+
+    
+    
+	
+	    
+	    
+		<section class="module module-narrow module-shallow">
+		    
+<h2 class="module-heading">
+	<i class="fa fa-filter"></i>
+	
+	
+	แท็คมาตรฐานบัญชีข้อมูลภาครัฐ
+</h2>
+
+		    
+
+	
+	<p class="module-content empty">ไม่พบ แท็คมาตรฐานบัญชีข้อมูลภาครัฐ ที่ตรงกับที่ค้นหา</p>
+	
+
+
+		</section>
+	    
+	
+    
+
+      
+        
+
+    
+    
+	
+	    
+	    
+		<section class="module module-narrow module-shallow">
+		    
+<h2 class="module-heading">
+	<i class="fa fa-filter"></i>
+	
+	
+	ประเภทชุดข้อมูล
+</h2>
+
+		    
+
+	
+	<nav aria-label="ประเภทชุดข้อมูล">
+		<ul class="list-unstyled nav nav-simple nav-facet">
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?data_type=%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%A0%E0%B8%B9%E0%B8%A1%E0%B8%B4%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%80%E0%B8%8A%E0%B8%B4%E0%B8%87%E0%B8%9E%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88" title="">
+				<span class="item-label">ข้อมูลภูมิสารสนเทศเชิงพื้นที่</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">5</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?data_type=%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AA%E0%B8%96%E0%B8%B4%E0%B8%95%E0%B8%B4" title="">
+				<span class="item-label">ข้อมูลสถิติ</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">5</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?data_type=%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AB%E0%B8%A5%E0%B8%B2%E0%B8%81%E0%B8%AB%E0%B8%A5%E0%B8%B2%E0%B8%A2%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%A0%E0%B8%97" title="">
+				<span class="item-label">ข้อมูลหลากหลายประเภท</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">5</span>
+			</a>
+			</li>
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?data_type=%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%9A%E0%B8%B5%E0%B8%A2%E0%B8%99" title="">
+				<span class="item-label">ข้อมูลระเบียน</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">1</span>
+			</a>
+			</li>
+		
+		</ul>
+	</nav>
+
+	<p class="module-footer">
+		
+		
+		
+	</p>
+	
+
+
+		</section>
+	    
+	
+    
+
+      
+        
+
+    
+    
+	
+	    
+	    
+		<section class="module module-narrow module-shallow">
+		    
+<h2 class="module-heading">
+	<i class="fa fa-filter"></i>
+	
+	
+	หมวดหมู่ตามธรรมาภิบาลข้อมูล
+</h2>
+
+		    
+
+	
+	<nav aria-label="หมวดหมู่ตามธรรมาภิบาลข้อมูล">
+		<ul class="list-unstyled nav nav-simple nav-facet">
+		
+			
+			
+			
+			
+			
+			<li class="nav-item">
+			<a href="/organization/b1b2540a-8fbc-41a4-a3a7-bcb1387346f5?data_category=%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0" title="">
+				<span class="item-label">ข้อมูลสาธารณะ</span>
+				<span class="hidden separator"> - </span>
+				<span class="item-count badge">16</span>
+			</a>
+			</li>
+		
+		</ul>
+	</nav>
+
+	<p class="module-footer">
+		
+		
+		
+	</p>
+	
+
+
+		</section>
+	    
+	
+    
+
+      
+    </div>
+    <a class="close no-text hide-filters"><i class="fa fa-times-circle"></i><span class="text">close</span></a>
+  </div>
+
+
+              </aside>
+            
+
+            
+              <div class="primary col-sm-9 col-xs-12" role="main">
+                
+                
+                  <article class="module">
+                    
+                      <header class="module-content page-header">
+                        
+                        <ul class="nav nav-tabs">
+                          
+  <li class="active"><a href="/organization/e068756a-4b37-4ee9-9f61-ce31d6ffbf3b"><i class="fa fa-sitemap"></i> ชุดข้อมูล</a></li>
+  <li><a href="/organization/activity/e068756a-4b37-4ee9-9f61-ce31d6ffbf3b/0"><i class="fa fa-clock-o"></i> ความเคลื่อนไหว</a></li>
+  <li><a href="/organization/about/e068756a-4b37-4ee9-9f61-ce31d6ffbf3b"><i class="fa fa-info-circle"></i> เกี่ยวกับ</a></li>
+
+                        </ul>
+                      </header>
+                    
+                    <div class="module-content">
+                      
+                      
+    
+    
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+<form id="organization-datasets-search-form" class="search-form" method="get" data-module="select-switch">
+
+  
+<div class="input-group search-input-group search-suggestion-wrap">
+    <input aria-label="ค้นหาชุดข้อมูล..."
+           id="field-giant-search"
+           data-module="gdc_portal_search_suggestion"
+           data-module-in_id="in-search"
+           type="text"
+           class="form-control input-lg"
+           name="q"
+           value=""
+           autocomplete="off"
+           placeholder="ค้นหาชุดข้อมูล...">
+    
+    <span class="input-group-btn">
+        <button class="btn btn-default btn-lg" type="submit" value="search" aria-label="Submit">
+          <i class="fa fa-search"></i>
+        </button>
+      </span>
+    
+</div>
+
+
+
+  
+    
+  
+
+  
+    
+      <div class="form-select form-group control-order-by">
+        <label for="field-order-by">เรียงโดย</label>
+        <select id="field-order-by" name="sort" class="form-control">
+          
+            
+              <option value="score desc, metadata_modified desc">ความสัมพันธ์ตามคำค้น</option>
+            
+          
+            
+              <option value="title_string asc">เรียงชื่อตามลำดับตัวอักษร (ก-ฮ)</option>
+            
+          
+            
+              <option value="title_string desc">เรียงชื่อตามลำดับตัวอักษร (ฮ-ก)</option>
+            
+          
+            
+              <option value="metadata_modified desc">ถูกแก้ไขครั้งสุดท้าย</option>
+            
+          
+            
+              <option value="views_recent desc">ได้รับความสนใจ</option>
+            
+          
+        </select>
+        
+        <button class="btn btn-default js-hide" type="submit">ไป</button>
+        
+      </div>
+    
+  
+
+  
+    
+      <h1>
+  
+    
+    
+    
+      
+      
+    
+    
+    
+  
+  พบ 16 ชุดข้อมูล</h1>
+    
+  
+
+  
+    
+      <p class="filter-list">
+        
+      </p>
+      <a class="show-filters btn btn-default">กรองผลลัพธ์</a>
+    
+  
+
+</form>
+
+
+
+
+
+  
+    
+      
+<style>
+  .dataset-item {
+    border-bottom: 1px solid #ddd;
+  }
+</style>
+
+  
+    <ul class="dataset-list list-unstyled">
+    	
+	      
+	        
+
+
+
+
+
+
+  <li class="dataset-item">
+    
+        <div class="dataset-content">
+          
+            <h2 class="dataset-heading">
+              
+                
+              
+              
+              
+      <a href="/dataset/gdpublish-o165">แนวปฏิบัติการจัดการเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ</a>
+              
+              
+              
+                
+                
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    15 total views
+                  </span>
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    2 recent views
+                  </span>
+                
+                
+              
+            </h2>
+          
+          <div class="text-right">
+            
+            <div class="blockTagSearch">
+            
+            
+            
+                <a class="aNoBUnder btn" href="/group/bc8ed840-1af9-4f48-9f58-14de60b695b3"
+                   style="white-space: nowrap;background-color: firebrick;color: white;margin:0 5px 5px 0;padding: 3px;font-size:.7em;">
+                    การส่งเสริมความโปร่งใส
+                </a>
+            
+            
+            </div>
+            
+          </div>
+          
+            
+              <div>แสดงคู่มือหรือแนวทางการดำเนินการต่อเรื่องร้องเรียนการทุจริตและประพฤติมิชอบของเจ้าหน้าที่ของหน่วยงาน ที่มีรายละเอียดอย่างน้อยประกอบด้วย 
+(1)...</div>
+            
+          
+        </div>
+        
+          
+            
+              <ul class="dataset-resources list-unstyled">
+                
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-o165" class="label label-default" data-format="pdf">PDF</a>
+                    
+                  </li>
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-o165" class="label label-default" data-format="csv">CSV</a>
+                    
+                  </li>
+                  
+                
+              </ul>
+            
+          
+        
+        <div style="margin-top: 8px;">
+          <i class="fa fa-building" aria-hidden="true"></i>
+          กรมการปกครอง
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <!--ลงทะเบียนวันที่ -->
+          8 กรกฎาคม 2569
+      </div>
+      
+  </li>
+
+	      
+	        
+
+
+
+
+
+
+  <li class="dataset-item">
+    
+        <div class="dataset-content">
+          
+            <h2 class="dataset-heading">
+              
+                
+              
+              
+              
+      <a href="/dataset/gdpublish-o53">แผนยุทธศาสตร์หรือแผนพัฒนาหน่วยงาน</a>
+              
+              
+              
+                
+                
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    11 total views
+                  </span>
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    4 recent views
+                  </span>
+                
+                
+              
+            </h2>
+          
+          <div class="text-right">
+            
+            <div class="blockTagSearch">
+            
+            
+            
+                <a class="aNoBUnder btn" href="/group/10589b70-b1a2-43c8-8322-51c898a39f0b"
+                   style="white-space: nowrap;background-color: firebrick;color: white;margin:0 5px 5px 0;padding: 3px;font-size:.7em;">
+                    การบริหารงาน
+                </a>
+            
+            
+            </div>
+            
+          </div>
+          
+            
+              <div>แสดงแผนยุทธศาสตร์หรือแผนพัฒนาของหน่วยงานที่มีระยะมากกว่า 1 และมีระยะเวลาบังคับใช้ครอบคลุมปีงบประมาณ พ.ศ. 2569 โดยมีรายละเอียดอย่างน้อยประกอบด้วย
+(1) ยุทธศาสตร์หรือแนวทาง
+(2)...</div>
+            
+          
+        </div>
+        
+          
+            
+              <ul class="dataset-resources list-unstyled">
+                
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-o53" class="label label-default" data-format="pdf">PDF</a>
+                    
+                  </li>
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-o53" class="label label-default" data-format="csv">CSV</a>
+                    
+                  </li>
+                  
+                
+              </ul>
+            
+          
+        
+        <div style="margin-top: 8px;">
+          <i class="fa fa-building" aria-hidden="true"></i>
+          กรมการปกครอง
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <!--ลงทะเบียนวันที่ -->
+          8 กรกฎาคม 2569
+      </div>
+      
+  </li>
+
+	      
+	        
+
+
+
+
+
+
+  <li class="dataset-item">
+    
+        <div class="dataset-content">
+          
+            <h2 class="dataset-heading">
+              
+                
+              
+              
+              
+      <a href="/dataset/gdpublish-https-www-dopa-go-th-info-organ-about5">ข้อมูลผู้บริหาร</a>
+              
+              
+              
+                
+                
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    28 total views
+                  </span>
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    9 recent views
+                  </span>
+                
+                
+              
+            </h2>
+          
+          <div class="text-right">
+            
+            <div class="blockTagSearch">
+            
+            
+            
+                <a class="aNoBUnder btn" href="/group/fe605f08-9ef4-4c59-9fd3-3f78b81e631b"
+                   style="white-space: nowrap;background-color: olivedrab;color: white;margin:0 5px 5px 0;padding: 3px;font-size:.7em;">
+                    ข้อมูลพื้นฐาน
+                </a>
+            
+            
+            </div>
+            
+          </div>
+          
+            
+              <div>แสดงข้อมูลของผู้บริหารสูงสุด และผู้ดำรงตำแหน่งทางการบริหารของหน่วยงานอย่างน้อยระดับรองผู้บริหารสูงสุด โดยมีข้อมูลอย่างน้อยประกอบด้วย
+(1) ชื่อ-นามสกุล
+(2) ตำแหน่ง
+(3)...</div>
+            
+          
+        </div>
+        
+          
+            
+              <ul class="dataset-resources list-unstyled">
+                
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-https-www-dopa-go-th-info-organ-about5" class="label label-default" data-format="csv">CSV</a>
+                    
+                  </li>
+                  
+                
+              </ul>
+            
+          
+        
+        <div style="margin-top: 8px;">
+          <i class="fa fa-building" aria-hidden="true"></i>
+          กรมการปกครอง
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <!--ลงทะเบียนวันที่ -->
+          17 มิถุนายน 2569
+      </div>
+      
+  </li>
+
+	      
+	        
+
+
+
+
+
+
+  <li class="dataset-item">
+    
+        <div class="dataset-content">
+          
+            <h2 class="dataset-heading">
+              
+                
+              
+              
+              
+      <a href="/dataset/gdpublish-o72">รายงานผลการดำเนินงานประจำปี</a>
+              
+              
+              
+                
+                
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    7 total views
+                  </span>
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    1 recent views
+                  </span>
+                
+                
+              
+            </h2>
+          
+          <div class="text-right">
+            
+            <div class="blockTagSearch">
+            
+            
+            
+                <a class="aNoBUnder btn" href="/group/10589b70-b1a2-43c8-8322-51c898a39f0b"
+                   style="white-space: nowrap;background-color: firebrick;color: white;margin:0 5px 5px 0;padding: 3px;font-size:.7em;">
+                    การบริหารงาน
+                </a>
+            
+            
+            </div>
+            
+          </div>
+          
+            
+              <div>แสดงผลการดำเนินงานตามแผนดำเนินงาน ประจำปีงบประมาณ พ.ศ. 2568 โดยมีรายละเอียดอย่างน้อยประกอบด้วย 
+(1) ผลการดำเนินงานของแต่ละโครงการหรือกิจกรรม 
+(2)...</div>
+            
+          
+        </div>
+        
+          
+            
+              <ul class="dataset-resources list-unstyled">
+                
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-o72" class="label label-default" data-format="pdf">PDF</a>
+                    
+                  </li>
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-o72" class="label label-default" data-format="csv">CSV</a>
+                    
+                  </li>
+                  
+                
+              </ul>
+            
+          
+        
+        <div style="margin-top: 8px;">
+          <i class="fa fa-building" aria-hidden="true"></i>
+          กรมการปกครอง
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <!--ลงทะเบียนวันที่ -->
+          17 มิถุนายน 2569
+      </div>
+      
+  </li>
+
+	      
+	        
+
+
+
+
+
+
+  <li class="dataset-item">
+    
+        <div class="dataset-content">
+          
+            <h2 class="dataset-heading">
+              
+                
+              
+              
+              
+      <a href="/dataset/gdpublish-o184">ข้อมูลสถิติเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ</a>
+              
+              
+              
+                
+                
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    18 total views
+                  </span>
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    4 recent views
+                  </span>
+                
+                
+              
+            </h2>
+          
+          <div class="text-right">
+            
+            <div class="blockTagSearch">
+            
+            
+            
+                <a class="aNoBUnder btn" href="/group/bc8ed840-1af9-4f48-9f58-14de60b695b3"
+                   style="white-space: nowrap;background-color: firebrick;color: white;margin:0 5px 5px 0;padding: 3px;font-size:.7em;">
+                    การส่งเสริมความโปร่งใส
+                </a>
+            
+            
+            </div>
+            
+          </div>
+          
+            
+              <div>ข้อมูลสถิติเรื่องร้องเรียนการทุจริตและประพฤติมิชอบของเจ้าหน้าที่ของหน่วยงาน ประกอบด้วย (1) จำนวนเรื่องร้องเรียนทั้งหมด (2) จำนวนเรื่องที่ดำเนินการแล้วเสร็จ (3)...</div>
+            
+          
+        </div>
+        
+          
+            
+              <ul class="dataset-resources list-unstyled">
+                
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-o184" class="label label-default" data-format="pdf">PDF</a>
+                    
+                  </li>
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-o184" class="label label-default" data-format="xlsx">XLSX</a>
+                    
+                  </li>
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-o184" class="label label-default" data-format="csv">CSV</a>
+                    
+                  </li>
+                  
+                
+              </ul>
+            
+          
+        
+        <div style="margin-top: 8px;">
+          <i class="fa fa-building" aria-hidden="true"></i>
+          กรมการปกครอง
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <!--ลงทะเบียนวันที่ -->
+          17 มิถุนายน 2569
+      </div>
+      
+  </li>
+
+	      
+	        
+
+
+
+
+
+
+  <li class="dataset-item">
+    
+        <div class="dataset-content">
+          
+            <h2 class="dataset-heading">
+              
+                
+              
+              
+              
+      <a href="/dataset/gdpublish-o92">คู่มือหรือแนวทางการขอรับบริการสำหรับผู้รับบริการ หรือผู้มาติดต่อ</a>
+              
+              
+              
+                
+                
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    21 total views
+                  </span>
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    6 recent views
+                  </span>
+                
+                
+              
+            </h2>
+          
+          <div class="text-right">
+            
+            <div class="blockTagSearch">
+            
+            
+            
+                <a class="aNoBUnder btn" href="/group/10589b70-b1a2-43c8-8322-51c898a39f0b"
+                   style="white-space: nowrap;background-color: firebrick;color: white;margin:0 5px 5px 0;padding: 3px;font-size:.7em;">
+                    การบริหารงาน
+                </a>
+            
+            
+            </div>
+            
+          </div>
+          
+            
+              <div>แสดงคู่มือการขอรับบริการหรือแนวทางการปฏิบัติที่ผู้รับบริการหรือผู้มาติดต่อกับหน่วยงานใช้เป็นข้อมูลในการขอรับบริการหรือติดต่อกับหน่วยงาน อย่างน้อย 3 งาน...</div>
+            
+          
+        </div>
+        
+          
+            
+              <ul class="dataset-resources list-unstyled">
+                
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-o92" class="label label-default" data-format="pdf">PDF</a>
+                    
+                  </li>
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-o92" class="label label-default" data-format="csv">CSV</a>
+                    
+                  </li>
+                  
+                
+              </ul>
+            
+          
+        
+        <div style="margin-top: 8px;">
+          <i class="fa fa-building" aria-hidden="true"></i>
+          กรมการปกครอง
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <!--ลงทะเบียนวันที่ -->
+          17 มิถุนายน 2569
+      </div>
+      
+  </li>
+
+	      
+	        
+
+
+
+
+
+
+  <li class="dataset-item">
+    
+        <div class="dataset-content">
+          
+            <h2 class="dataset-heading">
+              
+                
+              
+              
+              
+      <a href="/dataset/gdpublish-o224">รายงานผลการดำเนินการตามแผนบริหารจัดการความเสี่ยงการทุจริตของหน่วยงาน</a>
+              
+              
+              
+                
+                
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    16 total views
+                  </span>
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    5 recent views
+                  </span>
+                
+                
+              
+            </h2>
+          
+          <div class="text-right">
+            
+            <div class="blockTagSearch">
+            
+            
+            
+                <a class="aNoBUnder btn" href="/group/613b4f4e-5937-43dc-bd5b-54be7ad0c034"
+                   style="white-space: nowrap;background-color: darkorange;color: white;margin:0 5px 5px 0;padding: 3px;font-size:.7em;">
+                    การบริหารจัดการความเสี่ยงการทุจริต
+                </a>
+            
+            
+            </div>
+            
+          </div>
+          
+            
+              <div>แสดงข้อมูลรายงานการประเมินความเสี่ยงการทุจริตของหน่วยงานภาครัฐ ประจำปีงบประมาณ พ.ศ. 2568 ที่มีรายละเอียดอย่างน้อยประกอบด้วย
+(1) ประเด็นความเสี่ยงการทุจริต
+(2) ระดับของความเสี่ยง...</div>
+            
+          
+        </div>
+        
+          
+            
+              <ul class="dataset-resources list-unstyled">
+                
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-o224" class="label label-default" data-format="pdf">PDF</a>
+                    
+                  </li>
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-o224" class="label label-default" data-format="csv">CSV</a>
+                    
+                  </li>
+                  
+                
+              </ul>
+            
+          
+        
+        <div style="margin-top: 8px;">
+          <i class="fa fa-building" aria-hidden="true"></i>
+          กรมการปกครอง
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <!--ลงทะเบียนวันที่ -->
+          17 มิถุนายน 2569
+      </div>
+      
+  </li>
+
+	      
+	        
+
+
+
+
+
+
+  <li class="dataset-item">
+    
+        <div class="dataset-content">
+          
+            <h2 class="dataset-heading">
+              
+                
+              
+              
+              
+      <a href="/dataset/gdpublish-114">ข้อมูลด้านปกครองและความมั่นคง 76 จังหวัด</a>
+              
+              
+              
+                
+                
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    158 total views
+                  </span>
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    30 recent views
+                  </span>
+                
+                
+              
+            </h2>
+          
+          <div class="text-right">
+            
+          </div>
+          
+            
+              <div>ข้อมูลด้านปกครองและความมั่นคง</div>
+            
+          
+        </div>
+        
+          
+            
+              <ul class="dataset-resources list-unstyled">
+                
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-114" class="label label-default" data-format="json">JSON</a>
+                    
+                  </li>
+                  
+                
+              </ul>
+            
+          
+        
+        <div style="margin-top: 8px;">
+          <i class="fa fa-building" aria-hidden="true"></i>
+          กรมการปกครอง
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <!--ลงทะเบียนวันที่ -->
+          17 มิถุนายน 2569
+      </div>
+      
+  </li>
+
+	      
+	        
+
+
+
+
+
+
+  <li class="dataset-item">
+    
+        <div class="dataset-content">
+          
+            <h2 class="dataset-heading">
+              
+                
+              
+              
+              
+      <a href="/dataset/gdpublish-762">ข้อมูลด้านทรัพยากรธรรมชาติ 76 จังหวัด</a>
+              
+              
+              
+                
+                
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    33 total views
+                  </span>
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    2 recent views
+                  </span>
+                
+                
+              
+            </h2>
+          
+          <div class="text-right">
+            
+          </div>
+          
+            
+              <div>GIS, LAT, LONG,ทรัพยากรธรรมชาติ,องค์กรปกครองส่วนท้องถิ่น</div>
+            
+          
+        </div>
+        
+          
+            
+              <ul class="dataset-resources list-unstyled">
+                
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-762" class="label label-default" data-format="json">JSON</a>
+                    
+                  </li>
+                  
+                
+              </ul>
+            
+          
+        
+        <div style="margin-top: 8px;">
+          <i class="fa fa-building" aria-hidden="true"></i>
+          กรมการปกครอง
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <!--ลงทะเบียนวันที่ -->
+          17 มิถุนายน 2569
+      </div>
+      
+  </li>
+
+	      
+	        
+
+
+
+
+
+
+  <li class="dataset-item">
+    
+        <div class="dataset-content">
+          
+            <h2 class="dataset-heading">
+              
+                
+              
+              
+              
+      <a href="/dataset/gdpublish-093">ข้อมูลพื้นที่เสี่ยงสาธารณภัย 76 จังหวัด</a>
+              
+              
+              
+                
+                
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    49 total views
+                  </span>
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    5 recent views
+                  </span>
+                
+                
+              
+            </h2>
+          
+          <div class="text-right">
+            
+          </div>
+          
+            
+              <div>GIS, LAT, LONG, เขตพื้นที่, หมู่บ้าน, ตำบล, อำเภอ, จังหวัด</div>
+            
+          
+        </div>
+        
+          
+            
+              <ul class="dataset-resources list-unstyled">
+                
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-093" class="label label-default" data-format="json">JSON</a>
+                    
+                  </li>
+                  
+                
+              </ul>
+            
+          
+        
+        <div style="margin-top: 8px;">
+          <i class="fa fa-building" aria-hidden="true"></i>
+          กรมการปกครอง
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <!--ลงทะเบียนวันที่ -->
+          17 มิถุนายน 2569
+      </div>
+      
+  </li>
+
+	      
+	        
+
+
+
+
+
+
+  <li class="dataset-item">
+    
+        <div class="dataset-content">
+          
+            <h2 class="dataset-heading">
+              
+                
+              
+              
+              
+      <a href="/dataset/gdpublish-gis-02">ข้อมูลสถานที่ราชการและสถานที่สำคัญใน 76 จังหวัด</a>
+              
+              
+              
+                
+                
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    2609 total views
+                  </span>
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    53 recent views
+                  </span>
+                
+                
+              
+            </h2>
+          
+          <div class="text-right">
+            
+          </div>
+          
+            
+              <div>GIS, LAT, LONG, เขตพื้นที่, เขตพื้นที่การปกครอง, สถานที่ราชการ, สถานศึกษา, แหล่งการเรียนรู้ ,โบราณสถาน/ศาสนสถาน, สถานที่สำคัญ</div>
+            
+          
+        </div>
+        
+          
+            
+              <ul class="dataset-resources list-unstyled">
+                
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-gis-02" class="label label-default" data-format="json">JSON</a>
+                    
+                  </li>
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-gis-02" class="label label-default" data-format="xls">XLS</a>
+                    
+                  </li>
+                  
+                
+              </ul>
+            
+          
+        
+        <div style="margin-top: 8px;">
+          <i class="fa fa-building" aria-hidden="true"></i>
+          กรมการปกครอง
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <!--ลงทะเบียนวันที่ -->
+          16 เมษายน 2569
+      </div>
+      
+  </li>
+
+	      
+	        
+
+
+
+
+
+
+  <li class="dataset-item">
+    
+        <div class="dataset-content">
+          
+            <h2 class="dataset-heading">
+              
+                
+              
+              
+              
+      <a href="/dataset/gdpublish-statbyagemonth-64">สถิติจำนวนประชากรไทยที่มีชื่ออยู่ในทะเบียนบ้านแยกรายอายุ</a>
+              
+              
+              
+                
+                
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    2947 total views
+                  </span>
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    50 recent views
+                  </span>
+                
+                
+              
+            </h2>
+          
+          <div class="text-right">
+            
+            <div class="blockTagSearch">
+            
+            
+            
+                <a class="aNoBUnder btn" href="/group/category01-group01"
+                   style="white-space: nowrap;background-color: teal;color: white;margin:0 5px 5px 0;padding: 3px;font-size:.7em;">
+                    สาขาประชากรศาสตร์ ประชากรและเคหะ
+                </a>
+            
+            
+            </div>
+            
+          </div>
+          
+            
+              <div>จังหวัด, จำนวนประชากรแยกรายอายุ, ตำบล, หมู่บ้าน, อำเภอ, เขตพื้นที่, เขตพื้นที่การปกครอง</div>
+            
+          
+        </div>
+        
+          
+            
+              <ul class="dataset-resources list-unstyled">
+                
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-statbyagemonth-64" class="label label-default" data-format="text">TEXT</a>
+                    
+                  </li>
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-statbyagemonth-64" class="label label-default" data-format="zip">ZIP</a>
+                    
+                  </li>
+                  
+                
+              </ul>
+            
+          
+        
+        <div style="margin-top: 8px;">
+          <i class="fa fa-building" aria-hidden="true"></i>
+          กรมการปกครอง
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <!--ลงทะเบียนวันที่ -->
+          21 กรกฎาคม 2568
+      </div>
+      
+  </li>
+
+	      
+	        
+
+
+
+
+
+
+  <li class="dataset-item">
+    
+        <div class="dataset-content">
+          
+            <h2 class="dataset-heading">
+              
+                
+              
+              
+              
+      <a href="/dataset/gdpublish-statbyagemonth-66">สถิติจำนวนประชากรไทยที่มีชื่ออยู่ในทะเบียนบ้านแยกรายอายุรายเดือน</a>
+              
+              
+              
+                
+                
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    2456 total views
+                  </span>
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    54 recent views
+                  </span>
+                
+                
+              
+            </h2>
+          
+          <div class="text-right">
+            
+            <div class="blockTagSearch">
+            
+            
+            
+                <a class="aNoBUnder btn" href="/group/category01-group01"
+                   style="white-space: nowrap;background-color: teal;color: white;margin:0 5px 5px 0;padding: 3px;font-size:.7em;">
+                    สาขาประชากรศาสตร์ ประชากรและเคหะ
+                </a>
+            
+            
+            </div>
+            
+          </div>
+          
+            
+              <div>จำนวนประชากรแยกรายอายุ, ตำบล, หมู่บ้าน, อำเภอ, จังหวัด, เขตพื้นที่ , เขตพื้นที่การปกครอง</div>
+            
+          
+        </div>
+        
+          
+            
+              <ul class="dataset-resources list-unstyled">
+                
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-statbyagemonth-66" class="label label-default" data-format="xls">XLS</a>
+                    
+                  </li>
+                  
+                
+              </ul>
+            
+          
+        
+        <div style="margin-top: 8px;">
+          <i class="fa fa-building" aria-hidden="true"></i>
+          กรมการปกครอง
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <!--ลงทะเบียนวันที่ -->
+          21 กรกฎาคม 2568
+      </div>
+      
+  </li>
+
+	      
+	        
+
+
+
+
+
+
+  <li class="dataset-item">
+    
+        <div class="dataset-content">
+          
+            <h2 class="dataset-heading">
+              
+                
+              
+              
+              
+      <a href="/dataset/gdpublish-dopa-star">สถิติจำนวนประชากร</a>
+              
+              
+              
+                
+                
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    5370 total views
+                  </span>
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    100 recent views
+                  </span>
+                
+                
+              
+            </h2>
+          
+          <div class="text-right">
+            
+            <div class="blockTagSearch">
+            
+            
+            
+                <a class="aNoBUnder btn" href="/group/category01-group01"
+                   style="white-space: nowrap;background-color: teal;color: white;margin:0 5px 5px 0;padding: 3px;font-size:.7em;">
+                    สาขาประชากรศาสตร์ ประชากรและเคหะ
+                </a>
+            
+            
+            </div>
+            
+          </div>
+          
+            
+              <div>ข้อมูลจำนวนประชากรไทยที่มีชื่ออยู่ในทะเบียนบ้าน ที่ประกอบไปด้วยข้อมูลของ เขตพื้นที่ , เขตพื้นที่การปกครอง , จังหวัด , อำเภอ , ตำบล , หมู่บ้าน, จำนวนประชากร </div>
+            
+          
+        </div>
+        
+          
+            
+              <ul class="dataset-resources list-unstyled">
+                
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-dopa-star" class="label label-default" data-format="zip">ZIP</a>
+                    
+                  </li>
+                  
+                
+              </ul>
+            
+          
+        
+        <div style="margin-top: 8px;">
+          <i class="fa fa-building" aria-hidden="true"></i>
+          กรมการปกครอง
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <!--ลงทะเบียนวันที่ -->
+          21 กรกฎาคม 2568
+      </div>
+      
+  </li>
+
+	      
+	        
+
+
+
+
+
+
+  <li class="dataset-item">
+    
+        <div class="dataset-content">
+          
+            <h2 class="dataset-heading">
+              
+                
+              
+              
+              
+      <a href="/dataset/gdpublish-catalog-dopa-go-th-dataset-dopa-star">จํานวนการเกิดมีชีพทั้งหมด</a>
+              
+              
+              
+                
+                
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    978 total views
+                  </span>
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    20 recent views
+                  </span>
+                
+                
+              
+            </h2>
+          
+          <div class="text-right">
+            
+            <div class="blockTagSearch">
+            
+            
+            
+                <a class="aNoBUnder btn" href="/group/72bc2f9e-6a85-451a-86f6-b27e688e8cc8"
+                   style="white-space: nowrap;background-color: darkkhaki;color: white;margin:0 5px 5px 0;padding: 3px;font-size:.7em;">
+                    สาขาสุขภาพ
+                </a>
+            
+            
+            
+            
+                <a class="aNoBUnder btn" href="/group/48190ab6-be22-43f7-91d9-7adfd9fdddb8"
+                   style="white-space: nowrap;background-color: darkslategray;color: white;margin:0 5px 5px 0;padding: 3px;font-size:.7em;">
+                    สาขาหญิงและชาย
+                </a>
+            
+            
+            </div>
+            
+          </div>
+          
+            
+              <div>ข้อมูลสถิติจำนวนการเกิด ที่ประกอบไปด้วยข้อมูล จำนวนการเกิดของแยก เพศชาย, เพศหญิง แยกจังหวัด </div>
+            
+          
+        </div>
+        
+          
+            
+              <ul class="dataset-resources list-unstyled">
+                
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-catalog-dopa-go-th-dataset-dopa-star" class="label label-default" data-format="xlsx">XLSX</a>
+                    
+                  </li>
+                  
+                
+              </ul>
+            
+          
+        
+        <div style="margin-top: 8px;">
+          <i class="fa fa-building" aria-hidden="true"></i>
+          กรมการปกครอง
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <!--ลงทะเบียนวันที่ -->
+          23 กรกฎาคม 2567
+      </div>
+      
+  </li>
+
+	      
+	        
+
+
+
+
+
+
+  <li class="dataset-item">
+    
+        <div class="dataset-content">
+          
+            <h2 class="dataset-heading">
+              
+                
+              
+              
+              
+      <a href="/dataset/gdpublish-gis-01">ข้อมูลที่ตั้งและสภาพทั่วไปของหมู่บ้านใน 76 จังหวัด</a>
+              
+              
+              
+                
+                
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    12391 total views
+                  </span>
+                  <span class="textRecentViews">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    237 recent views
+                  </span>
+                
+                
+              
+            </h2>
+          
+          <div class="text-right">
+            
+            <div class="blockTagSearch">
+            
+            
+            
+                <a class="aNoBUnder btn" href="/group/8a4e2342-f9c8-4b58-bdd9-dc93b776dcf8"
+                   style="white-space: nowrap;background-color: slateblue;color: white;margin:0 5px 5px 0;padding: 3px;font-size:.7em;">
+                    คู่มือ/รายงาน/บทความ
+                </a>
+            
+            
+            </div>
+            
+          </div>
+          
+            
+              <div>GIS, LAT, LONG, เขตพื้นที่, เขตพื้นที่การปกครอง, หมู่บ้าน, ตำบล, อำเภอ, จังหวัด</div>
+            
+          
+        </div>
+        
+          
+            
+              <ul class="dataset-resources list-unstyled">
+                
+                  
+                  <li>
+                    
+                    <a href="/dataset/gdpublish-gis-01" class="label label-default" data-format="json">JSON</a>
+                    
+                  </li>
+                  
+                
+              </ul>
+            
+          
+        
+        <div style="margin-top: 8px;">
+          <i class="fa fa-building" aria-hidden="true"></i>
+          กรมการปกครอง
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <!--ลงทะเบียนวันที่ -->
+          20 ตุลาคม 2566
+      </div>
+      
+  </li>
+
+	      
+	    
+    </ul>
+  
+
+    
+  
+  
+    
+  
+
+                    </div>
+                  </article>
+                
+              </div>
+            
+          </div>
+        
+      </div>
+    </div>
+  
+    <footer class="site-footer">
+    <div class="container" style="padding-left: 0px;">
+      
+      <div class="blockFooter">
+          
+           <div class="bgFooterTop">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7 col-sm-7 col-xs-12">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <table>
+                                        <tr>
+                                            <td style="vertical-align:top"><i class="fa fa-map-marker iconFooter" aria-hidden="true"></i></td>
+                                            <td style="vertical-align:top"><p>สำนักงานสถิติแห่งชาติ กระทรวงดิจิทัลเพื่อเศรษฐกิจและสังคม<br>
+ศูนย์ราชการเฉลิมพระเกียรติ ๘๐ พรรษา อาคาร C ชั้น 5-11 ซ.แจ้งวัฒนะ 7 ถ.แจ้งวัฒนะ เขตหลักสี่ กทม. 10210</p></td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12 mt-1">
+                                    <table>
+                                        <tr>
+                                            <td style="vertical-align:top"><i class="fa fa-phone iconFooter" aria-hidden="true"></i></td>
+                                            <td style="vertical-align:top"><p>โทรศัพท์ (สำนักงานสถิติแห่งชาติ): 0 2141 7409</p></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 mt-1">
+                                    <table>
+                                        <tr>
+                                            <td style="vertical-align:top"><i class="fa fa-envelope iconFooter" aria-hidden="true"></i></td>
+                                            <td style="vertical-align:top"><p>อีเมล (สำนักงานสถิติแห่งชาติ): gsic@nso.go.th</p></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 col-sm-5 col-xs-12">
+                            <div class="row">
+                                
+                                <div class="col-md-12 col-sm-12 col-xs-12 text-right">
+                                    <span>
+                                        จำนวนผู้เข้าชม <span class="totalVisitor">10930658<!-- at 2026-09-05 --></span>
+                                    </span>
+                                </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12 text-right mt-1">
+                                        <p><a href="https://gdhelppage.gdcatalog.go.th/gdcatalog_QA.html">F.A.Q และ คู่มือ</a> | <a href="https://gdhelppage.gdcatalog.go.th/service1.html">นโยบายเว็บไซต์</a> | <a href="https://gdhelppage.gdcatalog.go.th/service2.html">นโยบายข้อมูลส่วนบุคคล</a> | <br>
+<a href="https://gdhelppage.gdcatalog.go.th/service3.html">นโยบายการรักษาความมั่นคงปลอดภัยเว็บไซต์</a> |
+<a href="https://gdhelppage.gdcatalog.go.th/gdcatalog_bi.html">รายงานจำนวนชุดข้อมูลในระบบ</a> |<br>
+<a href="https://gdhelppage.gdcatalog.go.th">ส่วนสนับสนุนการจัดทำบัญชีข้อมูลภาครัฐ</a></p>
+                                    </div>
+
+                                
+                                    
+<form class="form-inline form-select lang-select" action="/util/redirect" data-module="select-switch" method="POST">
+  <label for="field-lang-select">ภาษา</label>
+  <select id="field-lang-select" name="url" data-module="autocomplete" data-module-dropdown-class="lang-dropdown" data-module-container-class="lang-container">
+    
+      <option value="/en/organization/e068756a-4b37-4ee9-9f61-ce31d6ffbf3b" >
+        English
+      </option>
+    
+      <option value="/th/organization/e068756a-4b37-4ee9-9f61-ce31d6ffbf3b" selected="selected">
+        ไทย
+      </option>
+    
+  </select>
+  <button class="btn btn-default js-hide" type="submit">ไป</button>
+</form>
+                                
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="display: flex;justify-content: space-between;padding-left: 0px;margin-top: 10px;">
+                                    <span>
+                                        <span style="font-weight: bold;vertical-align: bottom;margin-right: 5px;color:rgba(255,255,255,0.85);">
+                                            Powered by:
+                                        </span>
+                                        <a class="hide-text ckan-footer-logo" href="http://ckan.org" target="_blank" style="padding-right: 5px;">
+                                            <img src="/base/images/ckan-logo-footer.png" alt="CKAN Logo">
+                                        </a>
+                                        <a href="https://gitlab.nectec.or.th/opend/installing-ckan/-/blob/master/README.md" target="_blank">
+                                            <img src="/base/images/logo-opend.png" alt="OPEND Logo" style="width: 50px;opacity: 0.8;">
+                                        </a><br/>
+                                        <span style="font-weight: bold;vertical-align: bottom;margin-right: 5px;color:rgba(255,255,255,0.85);line-height: 2;">สนับสนุน Thai-GDC โดย สำนักงานสถิติแห่งชาติ</span>
+                                        <br />
+                                        <span style="font-weight: bold;vertical-align: bottom;margin-right: 5px;color:rgba(255,255,255,0.85);">
+                                            เว็บไซต์ที่เกี่ยวข้อง:
+                                            <img alt="GDCatalog logo" src="/gdplus/images/GDCPlus-logo.png"
+                                                 style="height: 20px;vertical-align: text-top;">
+                                            <a href="https://directory.gdcatalog.go.th">
+                                                 บริการนามานุกรมบัญชีข้อมูลภาครัฐ
+                                            </a>
+                                        </span>
+                                    </span>
+                                    <span>
+                                        <small style="vertical-align: sub;">รุ่นโปรแกรม: 2.0.0</small><br/>
+                                        <span style="line-height: 1.7;"><small style="vertical-align: sub;">วันที่: 2023-06-06</small></span>
+                                    </span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+      </div>
+      
+    </div>
+
+    
+      
+    
+  </footer>
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    
+        
+        
+        <div class="js-hide" data-module="google-analytics"
+             data-module-googleanalytics_resource_prefix="/downloads/">
+        </div>
+    
+
+
+      
+
+    
+    
+    
+    <script src="/webassets/vendor/d8ae4bed_jquery.js" type="text/javascript"></script>
+<script src="/webassets/vendor/ab26884f_vendor.js" type="text/javascript"></script>
+<script src="/webassets/vendor/580fa18d_bootstrap.js" type="text/javascript"></script>
+<script src="/webassets/base/5f5a82bb_main.js" type="text/javascript"></script>
+<script src="/webassets/ckanext-thai-gdc/e87629bb_thai_gdc.js" type="text/javascript"></script>
+<script src="/webassets/base/acf3e552_ckan.js" type="text/javascript"></script>
+<script src="/webassets/base/8b1261f5_tracking.js" type="text/javascript"></script>
+<script src="/webassets/ckanext-googleanalytics/event_tracking.js?71ae8997" type="text/javascript"></script>
+  </body>
+</html>
+
 <!DOCTYPE html>
 <html class="client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-menu-disabled vector-feature-language-in-main-page-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-1 vector-feature-appearance-pinned-clientpref-1 skin-theme-clientpref-day vector-sticky-header-enabled vector-toc-available skin-thumbsize-clientpref-standard" lang="en" dir="ltr">
 <head>
